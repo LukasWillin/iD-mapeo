@@ -1,17 +1,19 @@
 {
-  "name": "id-mapeo",
+  "name": "mapeo-id-bmf",
   "version": "1.2.0",
-  "description": "iD Editor for osm-p2p & mapeo-desktop",
+  "description": "iD Editor for osm-p2p & mapeo-desktop changed to meet requirements of Bruno Manser Fonds",
   "main": "iD.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/digidem/iD-mapeo.git"
+    "url": "git+https://github.com/LukasWillin/mapeo-id-bmf.git"
   },
   "keywords": [
     "editor",
     "openstreetmap",
     "mapeo",
-    "osm-p2p"
+    "osm-p2p",
+	"bmf",
+	"bruno-manser-fonds"
   ],
   "license": "ISC",
   "scripts": {
@@ -94,9 +96,9 @@
     "npm": ">=3.0.0"
   },
   "bugs": {
-    "url": "https://github.com/digidem/iD-mapeo/issues"
+    "url": "https://github.com/LukasWillin/mapeo-id-bmf/issues"
   },
-  "homepage": "https://github.com/digidem/iD-mapeo#readme",
+  "homepage": "https://github.com/LukasWillin/mapeo-id-bmf#readme",
   "directories": {
     "doc": "docs",
     "test": "test"
