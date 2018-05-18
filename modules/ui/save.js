@@ -5,6 +5,8 @@ import {
     select as d3_select
 } from 'd3-selection';
 
+import { padStart } from 'lodash-es';
+
 import { d3keybinding as d3_keybinding } from '../lib/d3.keybinding.js';
 
 import { t } from '../util/locale';
@@ -50,6 +52,8 @@ export function uiSave(context) {
 
     return function(selection) {
         var numChanges = 0;
+        var spanTitle;
+        var spanNumChanges;
 
         function updateCount() {
             var _ = history.difference().summary().length;
@@ -68,10 +72,13 @@ export function uiSave(context) {
                 .classed('has-count', numChanges > 0)
                 .style('background', background);
 
-            button.select('span.count')
+            spanNumChanges
+                .text(' +' + numChanges);
+
+            /*button.select('span.count')
                 .text(numChanges)
                 .style('background', background)
-                .style('border-color', background);
+                .style('border-color', background);*/
         }
 
 
@@ -87,16 +94,25 @@ export function uiSave(context) {
             .on('click', save)
             .call(tooltipBehavior);
 
-        button
+        spanTitle = button
             .call(svgIcon('#icon-save', 'pre-text'))
-            .append('span')
-            .attr('class', 'label')
+            .append('span');
+
+        spanTitle
+            .attr('class', 'label saveTitle')
             .text(t('save.title'));
 
-        button
+        spanNumChanges = button
+            .append('span');
+
+        spanNumChanges
+            .attr('class', 'label saveNumChange')
+            .text('');
+
+        /*button
             .append('span')
             .attr('class', 'count')
-            .text('0');
+            .text('0');*/
 
         updateCount();
 

@@ -86,7 +86,8 @@ body {
 
 .limiter {
     position: relative;
-    max-width: 1200px;
+    padding: 0px 5px;
+    /* max-width: 1200px; */
 }
 
 .spinner {
@@ -542,7 +543,26 @@ button.secondary-action:hover {
     background: #cccccc;
 }
 
-button.save .count {
+div#save-wrap.button-wrap.col1 {
+    float: right;
+    width: auto;
+    min-width: 140px;
+}
+button.save.col12 {
+    padding: 0px 10px;
+}
+span.label.saveTitle {
+    /*float: left;*/
+    text-align: left;
+}
+span.label.saveNumChange {
+    float: right;
+    min-width: 38px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* button.save .count {
     display: none;
 }
 
@@ -586,7 +606,7 @@ button.save.has-count .count::before {
     border-right: none;
     left: auto;
     right: -6px;
-}
+}*/
 
 /* Icons */
 

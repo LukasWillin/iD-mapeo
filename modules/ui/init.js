@@ -111,6 +111,7 @@ export function uiInit(context) {
 
         limiter
             .append('div')
+            .attr('id', 'save-wrap')
             .attr('class', 'button-wrap col1')
             .call(uiSave(context));
 
