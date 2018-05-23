@@ -65,15 +65,16 @@ export function uiSave(context) {
                     t(numChanges > 0 ? 'save.help' : 'save.no_changes'), key)
                 );
 
-            var background = getBackground(numChanges);
+            var buttonSaveBackground = getBackground(numChanges);
 
             button
                 .classed('disabled', numChanges === 0)
-                .classed('has-count', numChanges > 0)
-                .style('background', background);
+                .classed('has-count', numChanges > 0);
+                //.style('background', background);
 
             spanNumChanges
-                .text(' +' + numChanges);
+                .text(' +' + numChanges)
+                .attr('style', "background-color:" + buttonSaveBackground);
 
             /*button.select('span.count')
                 .text(numChanges)

@@ -547,9 +547,14 @@ div#save-wrap.button-wrap.col1 {
     float: right;
     width: auto;
     min-width: 160px;
+    border-radius: 4px;
+    margin-right: 3px;
 }
 button.save.col12 {
-    padding: 0px 10px;
+    padding: 0px 0px 0px 10px;
+}
+div#save-wrap.button-wrap.col1 button.save.col12:focus, div#save-wrap.button-wrap.col1 button.save.col12:hover {
+    background-color: #ececec;
 }
 .svg-icon-save {
     float: left;
@@ -559,17 +564,23 @@ div.save-icon-wrap {
     min-width: 95px;
     display: inline-block;
     text-align: left;
+    padding-top: 8px;
 }
 span.label.saveTitle {
     /*float: left;*/
     text-align: left;
+    vertical-align: middle;
 }
 span.label.saveNumChange {
     float: right;
-    min-width: 44px;
-    max.width: 44px;
+    min-width: 50px;
+    max.width: 50px;
     text-align: right;
-    padding-right: 5px;
+    padding-right: 10px;
+    min-height: 40px;
+    max-heigth: 40px;
+    padding-top: 8px;
+    border-radius: 0px 4px 4px 0;
 }
 
 /* button.save .count {
