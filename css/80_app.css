@@ -546,10 +546,19 @@ button.secondary-action:hover {
 div#save-wrap.button-wrap.col1 {
     float: right;
     width: auto;
-    min-width: 140px;
+    min-width: 160px;
 }
 button.save.col12 {
     padding: 0px 10px;
+}
+.svg-icon-save {
+    float: left;
+}
+div.save-icon-wrap {
+    max-width: 95px;
+    min-width: 95px;
+    display: inline-block;
+    text-align: left;
 }
 span.label.saveTitle {
     /*float: left;*/
@@ -557,7 +566,8 @@ span.label.saveTitle {
 }
 span.label.saveNumChange {
     float: right;
-    min-width: 38px;
+    min-width: 44px;
+    max.width: 44px;
     text-align: right;
     padding-right: 5px;
 }
